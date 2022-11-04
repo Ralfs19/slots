@@ -44,16 +44,19 @@ while (true) {
         $slots[0][1] = $symbols[1];
         $slots[0][2] = $symbols[2];
         $slots[0][3] = $symbols[3];
+        $slots[0][4] = $symbols[4];
         //  Second Line
         $slots[1][0] = $symbols[5];
         $slots[1][1] = $symbols[6];
         $slots[1][2] = $symbols[7];
         $slots[1][3] = $symbols[8];
+        $slots[1][4] = $symbols[9];
         //  Third Line
         $slots[2][0] = $symbols[10];
         $slots[2][1] = $symbols[11];
         $slots[2][2] = $symbols[12];
         $slots[2][3] = $symbols[13];
+        $slots[2][4] = $symbols[13];
     }
     //  For Q lines
     if ($slots[0][0] == "Q" && $slots[0][1] == "Q" && $slots[0][2] == "Q" && $slots[0][3] == "Q" && $slots[0][4] == "Q" ) {
@@ -123,7 +126,7 @@ while (true) {
     if ($slots[2][0] == "Q" && $slots[1][1] == "Q" && $slots[0][2] == "Q" && $slots[1][3] == "Q" && $slots[2][4] == "Q"){
         $balance += 30 * $bets;
     }
-    if ($balance < 1){
+    if ($balance < 0){
         echo "Out of money";
         exit;
     }
