@@ -20,7 +20,7 @@ $balance = 100;
 echo "To start play press number 1" . PHP_EOL;
 while (true) {
 
-    if ($balance < 0){
+    if ($balance == 2){
         echo "Out of money";
         exit;
     }
