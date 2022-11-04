@@ -17,12 +17,7 @@ $bets = 2;
 $symbols = ["Q", "Q", "Q", "Q", "Q", "A", "A", "A", "A", "A", "J", "J", "J", "J", "J", "K", "K", "K", "K", "K", "Q", "A", "J", "J", "J", "J", "J", "J", "J", "J"];
 $balance = 100;
 
-
-    /*$randomSym[] = shuffle($symbols);*/
-
 echo "To start play press number 1" . PHP_EOL;
-
-
 while (true) {
 
     $input = readline("Enter your choise: ");
@@ -59,68 +54,79 @@ while (true) {
         $slots[2][1] = $symbols[11];
         $slots[2][2] = $symbols[12];
         $slots[2][3] = $symbols[13];
-
     }
-
     //  For Q lines
-    if ($slots[0][0] == "Q" && $slots[0][1] == "Q" && $slots[0][2] == "Q" && $slots[0][3] == "Q" ) {
+    if ($slots[0][0] == "Q" && $slots[0][1] == "Q" && $slots[0][2] == "Q" && $slots[0][3] == "Q" && $slots[0][4] == "Q" ) {
         $balance += 30 * $bets;
-
     }
-    if ($slots[1][0] == "Q" && $slots[1][1] == "Q" && $slots[1][2] == "Q" && $slots[1][3] == "Q" ) {
+    if ($slots[1][0] == "Q" && $slots[1][1] == "Q" && $slots[1][2] == "Q" && $slots[1][3] == "Q" && $slots[1][4] == "Q") {
         $balance += 30 * $bets;
-
     }
-    if ($slots[2][0] == "Q" && $slots[2][1] == "Q" && $slots[2][2] == "Q" && $slots[2][3] == "Q" ) {
+    if ($slots[2][0] == "Q" && $slots[2][1] == "Q" && $slots[2][2] == "Q" && $slots[2][3] == "Q" && $slots[2][4] == "Q") {
         $balance += 30 * $bets;
-
     }
     //  For A lines
-    if ($slots[0][0] == "A" && $slots[0][1] == "A" && $slots[0][2] == "A" && $slots[0][3] == "A" ) {
+    if ($slots[0][0] == "A" && $slots[0][1] == "A" && $slots[0][2] == "A" && $slots[0][3] == "A" && $slots[0][4] == "A") {
         $balance += 50 * $bets;
-
     }
-    if ($slots[1][0] == "A" && $slots[1][1] == "A" && $slots[1][2] == "A" && $slots[1][3] == "A" ) {
+    if ($slots[1][0] == "A" && $slots[1][1] == "A" && $slots[1][2] == "A" && $slots[1][3] == "A" && $slots[1][4] == "A") {
         $balance += 50 * $bets;
-
     }
-    if ($slots[2][0] == "A" && $slots[2][1] == "A" && $slots[2][2] == "A" && $slots[2][3] == "A" ) {
+    if ($slots[2][0] == "A" && $slots[2][1] == "A" && $slots[2][2] == "A" && $slots[2][3] == "A" && $slots[2][4] == "A") {
         $balance += 50 * $bets;
-
     }
     //  For J lines
-    if ($slots[0][0] == "J" && $slots[0][1] == "J" && $slots[0][2] == "J" && $slots[0][3] == "J" ) {
+    if ($slots[0][0] == "J" && $slots[0][1] == "J" && $slots[0][2] == "J" && $slots[0][3] == "J" && $slots[0][4] == "J") {
         $balance += 10 * $bets;
-
     }
-    if ($slots[1][0] == "J" && $slots[1][1] == "J" && $slots[1][2] == "J" && $slots[1][3] == "J" ) {
+    if ($slots[1][0] == "J" && $slots[1][1] == "J" && $slots[1][2] == "J" && $slots[1][3] == "J" && $slots[1][4] == "J") {
         $balance += 10 * $bets;
-
     }
-    if ($slots[2][0] == "J" && $slots[2][1] == "J" && $slots[2][2] == "J" && $slots[2][3] == "J" ) {
+    if ($slots[2][0] == "J" && $slots[2][1] == "J" && $slots[2][2] == "J" && $slots[2][3] == "J" && $slots[2][4] == "J") {
         $balance += 10 * $bets;
-
     }
     //  For K lines
-    if ($slots[0][0] == "K" && $slots[0][1] == "K" && $slots[0][2] == "K" && $slots[0][3] == "K" ) {
+    if ($slots[0][0] == "K" && $slots[0][1] == "K" && $slots[0][2] == "K" && $slots[0][3] == "K" && $slots[0][4] == "K") {
         $balance += 40 * $bets;
-
     }
-    if ($slots[1][0] == "K" && $slots[1][1] == "K" && $slots[1][2] == "K" && $slots[1][3] == "K" ) {
+    if ($slots[1][0] == "K" && $slots[1][1] == "K" && $slots[1][2] == "K" && $slots[1][3] == "K" && $slots[1][4] == "K") {
         $balance += 40 * $bets;
-
     }
-    if ($slots[2][0] == "K" && $slots[2][1] == "K" && $slots[2][2] == "K" && $slots[2][3] == "K" ) {
+    if ($slots[2][0] == "K" && $slots[2][1] == "K" && $slots[2][2] == "K" && $slots[2][3] == "K" && $slots[2][4] == "K") {
         $balance += 40 * $bets;
-
-
     }
-
+    //  For A zigzag
+    if ($slots[0][0] == "A" && $slots[1][1] == "A" && $slots[2][2] == "A" && $slots[1][3] == "A" && $slots[0][4] == "A"){
+        $balance += 25 * $bets;
+    }
+    if ($slots[2][0] == "A" && $slots[1][1] == "A" && $slots[0][2] == "A" && $slots[1][3] == "A" && $slots[2][4] == "A"){
+        $balance += 25 * $bets;
+    }
+    // For K zigzag
+    if ($slots[0][0] == "K" && $slots[1][1] == "K" && $slots[2][2] == "K" && $slots[1][3] == "K" && $slots[0][4] == "K"){
+        $balance += 20 * $bets;
+    }
+    if ($slots[2][0] == "K" && $slots[1][1] == "K" && $slots[0][2] == "K" && $slots[1][3] == "K" && $slots[2][4] == "K"){
+        $balance += 20 * $bets;
+    }
+    //  For J zigzag
+    if ($slots[0][0] == "J" && $slots[1][1] == "J" && $slots[2][2] == "J" && $slots[1][3] == "J" && $slots[0][4] == "J"){
+        $balance += 15 * $bets;
+    }
+    if ($slots[2][0] == "J" && $slots[1][1] == "J" && $slots[0][2] == "J" && $slots[1][3] == "J" && $slots[2][4] == "J"){
+        $balance += 15 * $bets;
+    }
+    // For Q zigzag
+    if ($slots[0][0] == "Q" && $slots[1][1] == "Q" && $slots[2][2] == "Q" && $slots[1][3] == "Q" && $slots[0][4] == "Q"){
+        $balance += 30 * $bets;
+    }
+    if ($slots[2][0] == "Q" && $slots[1][1] == "Q" && $slots[0][2] == "Q" && $slots[1][3] == "Q" && $slots[2][4] == "Q"){
+        $balance += 30 * $bets;
+    }
     if ($balance < 1){
         echo "Out of money";
         exit;
     }
-
 
     displaySlots($slots);
     echo 'Your balance: ' . $balance . '$' . PHP_EOL;
@@ -131,7 +137,4 @@ while (true) {
     echo "[6] bet 8$" . PHP_EOL;
 
 }
-
-
-
 
