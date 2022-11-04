@@ -20,6 +20,11 @@ $balance = 100;
 echo "To start play press number 1" . PHP_EOL;
 while (true) {
 
+    if ($balance < 0){
+        echo "Out of money";
+        exit;
+    }
+
     $input = readline("Enter your choise: ");
     if ($input == 2){
         $balance = 100;
@@ -126,10 +131,7 @@ while (true) {
     if ($slots[2][0] == "Q" && $slots[1][1] == "Q" && $slots[0][2] == "Q" && $slots[1][3] == "Q" && $slots[2][4] == "Q"){
         $balance += 30 * $bets;
     }
-    if ($balance < 0){
-        echo "Out of money";
-        exit;
-    }
+
 
     displaySlots($slots);
     echo 'Your balance: ' . $balance . '$' . PHP_EOL;
